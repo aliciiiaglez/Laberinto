@@ -7,6 +7,8 @@ public class Movjugador : MonoBehaviour
     public float movimientoEjeX;
     public float movimientoEjeY;
     public float movimientoEjeZ;
+
+    public float velocidadMovimiento = 2.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +19,8 @@ public class Movjugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movimientoEjeZ = Input.GetAxis("Horizontal") * Time.deltaTime;
-        movimientoEjeX = Input.GetAxis("Vertical") * Time.deltaTime;
+        movimientoEjeZ = - Input.GetAxis("Horizontal") * Time.deltaTime * velocidadMovimiento;
+        movimientoEjeX = Input.GetAxis("Vertical") * Time.deltaTime * velocidadMovimiento; 
         transform.Translate(movimientoEjeX, movimientoEjeY, movimientoEjeZ);  
     }
 }
