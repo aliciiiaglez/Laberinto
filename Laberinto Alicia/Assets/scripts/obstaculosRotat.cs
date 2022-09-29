@@ -11,5 +11,7 @@ public class obstaculosRotat : MonoBehaviour
     void Update()
     {
         transform.Rotate(0.0f, rotacionY* Time.deltaTime, 0.0f);
+    //Solo giran en el EjeY
     }
+
 }

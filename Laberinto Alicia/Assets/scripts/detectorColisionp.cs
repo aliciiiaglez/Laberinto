@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class detectorColisionp : MonoBehaviour
 {
+    //Marcamos los materiales
     [SerializeField]
     Material materialParedDefecto;
 
